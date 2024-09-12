@@ -22,19 +22,19 @@ class TourSerializer(serializers.ModelSerializer):
 #         }
 
 
-class GallerySerializer(serializers.Serializer):
+class GallerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
         fields = ['link']
 
 
-class CategorySerializer(serializers.Serializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['name', 'desk', 'thumb']
 
 
-class DaySerializer(serializers.Serializer):
+class DaySerializer(serializers.ModelSerializer):
     class Meta:
         model = Day
         fields = ['name', 'desk', 'photos']

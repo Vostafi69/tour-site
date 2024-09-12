@@ -3,6 +3,7 @@ from .serializers import *
 from rest_framework import viewsets
 from rest_framework.pagination import *
 from rest_framework import generics
+from rest_framework.decorators import action
 
 
 class LimitOffSetPagination(PageNumberPagination):
@@ -35,6 +36,11 @@ class DayViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+    @action(methods=['get'], detail=False)
+    def get_list(self, request):
+        categories = Category.objects.all()
+        return Response({'categories': [c.name for c in categories]})
 
 
 class GalleryViewSet(viewsets.ModelViewSet):
