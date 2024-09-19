@@ -133,14 +133,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-     'http://188.243.183.37:8000',
-     'http://188.243.183.37:5173',
-     'http://188.243.183.37:8000'
- ] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
+     'http://188.243.183.37:8000', 'http://188.243.183.37:5173', 'http://188.243.183.37:3000',
+     'http://localhost:8000', 'http://localhost:3000', 'http://localhost:5173'] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    'http://188.243.183.37:8000',
-    'http://188.243.183.37:5173',
-    r'^http:\/\/localhost:\d+$',
+    'http://188.243.183.37:8000', 'http://188.243.183.37:5173', r'^http:\/\/localhost:\d+$', 'http://localhost:3000',
+    'http://localhost:8000', 'http://localhost:3000', 'http://localhost:5173',
 ]
 #
 CSRF_TRUSTED_ORIGINS = ['http://188.243.183.37:8000', '188.243.183.37', '192.168.1.100', '172.30.176.1', 'http://188.243.183.37:8000']
+
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
+
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
