@@ -132,13 +132,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
-# CORS_ALLOWED_ORIGINS = [
-#      'http://localhost:8000',
-#      'http://localhost:5173',
-#  ] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
+CORS_ALLOWED_ORIGINS = [
+     'http://localhost:8000',
+     'http://localhost:5173',
+ ] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
 CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost:8000',
     'http://localhost:5173',
 ]
 #
-# CSRF_TRUSTED_ORIGINS = ['http://192.168.0.8:8000']
+CSRF_TRUSTED_ORIGINS = ['http://188.243.183.37:8000', '188.243.183.37', '192.168.1.100', '172.30.176.1']
