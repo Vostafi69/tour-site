@@ -25,6 +25,8 @@ from backend_api.views import *
 router = routers.SimpleRouter()
 router.register(r'tours', TourViewSet)
 router.register(r'category', CategoryViewSet)
+router.register(r'day', DayViewSet)
+router.register(r'gallery', GalleryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
