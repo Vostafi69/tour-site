@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0w1jpbz#o(d7+d*py@=y0jrg_x#e4p7wqgg$+z93fqpg_=w^oi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['45.142.44.42', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -82,10 +82,11 @@ WSGI_APPLICATION = 'django_tour.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "tour_db",
-	"USER": "admin",
+        "NAME": "postgres",
+        "USER": "admin",
         "PASSWORD": "admin",
-        "HOST": "localhost"
+        "HOST": "pgdb",
+        "PORT": "5432",
     }
 }
 
@@ -140,7 +141,7 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost:8000', 'http://localhost:3000', 'http://localhost:5173',
 ]
 #
-CSRF_TRUSTED_ORIGINS = ['http://188.243.183.37:8000', '188.243.183.37', '192.168.1.100', '172.30.176.1', 'http://188.243.183.37:3000', 'http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['http://188.243.183.37:8000', 'http://188.243.183.37:3000', 'http://localhost:3000']
 
 CORS_ALLOW_HEADERS = (
     "accept",
