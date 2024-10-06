@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Balsamiq_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const balsamiq = Balsamiq_Sans({
   subsets: ["cyrillic"],
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
   description: "Туры и экскурсии по всему дальнему востоку",
 };
 
+const queryClient = new QueryClient();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("max-w-[1920px] mx-auto", balsamiq.className)}>
-        {children}
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
       </body>
     </html>
   );
