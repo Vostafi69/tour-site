@@ -8,7 +8,7 @@ from rest_framework.decorators import action
 
 class LimitOffSetPagination(PageNumberPagination):
     page_size = 4
-    page_query_param = 'page_size'
+    page_query_param = 'limit'
     max_page_size = 4
 
 

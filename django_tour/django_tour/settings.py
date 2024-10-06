@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0w1jpbz#o(d7+d*py@=y0jrg_x#e4p7wqgg$+z93fqpg_=w^oi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['45.142.44.42', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "psycopg2",
     'rest_framework',
+    'corsheaders',
     'backend_api.apps.BackendApiConfig',
 ]
 
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'django_tour.urls'
@@ -80,10 +82,11 @@ WSGI_APPLICATION = 'django_tour.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "tour_db",
-        "USER": "postgres",
-        "PASSWORD": "9999",
-        "HOST": "localhost"
+        "NAME": "postgres",
+        "USER": "admin",
+        "PASSWORD": "admin",
+        "HOST": "pgdb",
+        "PORT": "5432",
     }
 }
 
@@ -122,21 +125,38 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
-# CORS_ALLOW_CREDENTIALS = True
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:8000',
-#     'http://localhost:5173',
-# ] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
-# CORS_ALLOWED_ORIGIN_REGEXES = [
-#     'http://localhost:8000',
-#     'http://localhost:5173',
-# ]
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+     'http://188.243.183.37:8000', 'http://188.243.183.37:5173', 'http://188.243.183.37:3000',
+     'http://localhost:8000', 'http://localhost:3000', 'http://localhost:5173'] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    'http://188.243.183.37:8000', 'http://188.243.183.37:5173', r'^http:\/\/localhost:\d+$', 'http://localhost:3000',
+    'http://localhost:8000', 'http://localhost:3000', 'http://localhost:5173',
+]
 #
-# CSRF_TRUSTED_ORIGINS = ['http://192.168.0.8:8000']
+CSRF_TRUSTED_ORIGINS = ['http://188.243.183.37:8000', 'http://188.243.183.37:3000', 'http://localhost:3000']
+
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
+
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
