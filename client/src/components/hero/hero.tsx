@@ -32,9 +32,19 @@ export const Hero: FC = () => {
         </motion.h1>
       </div>
       <motion.div style={{ y: sm }} className="w-full h-full absolute z-[55]">
-        <Image src={"/front.png"} alt="Река" fill />
+        <Image
+          className="h-full object-cover"
+          src={"/front.png"}
+          alt="Река"
+          fill
+        />
       </motion.div>
-      <Image src={"/fon.png"} alt="Природа" fill />
+      <Image
+        className="h-full object-cover"
+        src={"/fon.png"}
+        alt="Природа"
+        fill
+      />
     </section>
   );
 };
