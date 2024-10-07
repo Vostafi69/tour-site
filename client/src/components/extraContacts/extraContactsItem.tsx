@@ -19,7 +19,11 @@ export const ExtraContactsItem: FC<ExtraContactsItemProps> = ({
   return (
     <li className={className}>
       <Link
-        className={cn(type === "email" ? "text-[#6FD0D2]" : "", linkClassName)}
+        className={cn(
+          type === "email" ? "text-[#6FD0D2]" : "",
+          "text-xs sm:text-base",
+          linkClassName
+        )}
         href={href}
         {...props}
       >

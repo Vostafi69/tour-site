@@ -1,5 +1,6 @@
 import { AnchorHTMLAttributes, FC } from "react";
 import { Link } from "../link/link";
+import { cn } from "@/lib/utils";
 
 interface PhoneItemProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   phone: string;
@@ -15,7 +16,11 @@ export const PhoneItem: FC<PhoneItemProps> = ({
 }) => {
   return (
     <li className={className}>
-      <Link href={`tel:${href}`} className={linkClassName} {...props}>
+      <Link
+        href={`tel:${href}`}
+        className={cn("text-xs sm:text-base", linkClassName)}
+        {...props}
+      >
         {phone}
       </Link>
     </li>
