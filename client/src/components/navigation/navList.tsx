@@ -11,7 +11,7 @@ const __MOCK_MENU__ = [
 
 export const NavList: FC = () => {
   return (
-    <ul className="flex justify-between w-full h-full items-center">
+    <ul className="flex justify-center w-full h-full items-center flex-wrap lg:justify-between space-x-3">
       {__MOCK_MENU__.map((navItemContent, index) => (
         <NavItem key={index}>{navItemContent}</NavItem>
       ))}

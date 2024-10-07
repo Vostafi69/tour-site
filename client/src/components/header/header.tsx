@@ -9,7 +9,7 @@ import { EXTRA_CONTACTS } from "../contactsSection/extraContacts";
 export const Header: FC = () => {
   return (
     <header className="absolute top-0 left-0 right-0 z-[56]">
-      <div className="h-[120px] bg-white flex flex-row justify-between items-center px-[40px]">
+      <div className="h-[120px] bg-white flex flex-row justify-between items-center px-4 sm:px-[40px]">
         <div className="flex-1">
           <ExtraContactsList extraContacts={EXTRA_CONTACTS} />
         </div>
