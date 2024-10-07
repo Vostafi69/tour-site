@@ -17,13 +17,13 @@ export default function Home() {
           <div className="absolute -top-[140px] z-[60] w-full h-[150px]">
             <Image src={"/fog.png"} alt="Туман" fill />
           </div>
-          <ToursSection />
+          {/* <ToursSection /> */}
         </div>
-        <PartnersSection />
-        <ContactsSection />
-        <GallerySection />
+        {/* <PartnersSection /> */}
+        {/* <ContactsSection /> */}
+        {/* <GallerySection /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

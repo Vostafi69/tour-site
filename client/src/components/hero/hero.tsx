@@ -14,7 +14,6 @@ export const Hero: FC = () => {
 
   const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
   return (
     <section
@@ -24,7 +23,7 @@ export const Hero: FC = () => {
       <div className="absolute inset-0 flex items-center justify-center pt-[80px]">
         <motion.h1
           style={{ y: md }}
-          className="text-white z-50 text-[150px] font-bold text-left -mt-[171px]"
+          className="text-white z-50 xl:text-9xl lg:text-7xl md:text-5xl text-4xl font-bold text-left -mt-[171px] "
         >
           Дальневосточные
           <br />
