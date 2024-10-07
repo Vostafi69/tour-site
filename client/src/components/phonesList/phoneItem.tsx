@@ -18,7 +18,7 @@ export const PhoneItem: FC<PhoneItemProps> = ({
     <li className={className}>
       <Link
         href={`tel:${href}`}
-        className={cn("text-xs sm:text-base", linkClassName)}
+        className={cn("text-[10px] sm:text-base", linkClassName)}
         {...props}
       >
         {phone}

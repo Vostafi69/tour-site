@@ -17,9 +17,10 @@ export const ExtraContactsList: FC<ExtraContactsListProps> = ({
   linkClassName,
 }) => {
   return (
-    <ul className="flex flex-col space-y-1">
+    <ul className="flex flex-col space-y-[2px] sm:space-y-1">
       {extraContacts.map((extraContact, index) => (
         <ExtraContactsItem
+          className="leading-3 sm:leading-none"
           key={index}
           href={extraContact.href}
           type={extraContact.type}

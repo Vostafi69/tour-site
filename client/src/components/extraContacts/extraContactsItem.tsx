@@ -20,8 +20,8 @@ export const ExtraContactsItem: FC<ExtraContactsItemProps> = ({
     <li className={className}>
       <Link
         className={cn(
-          type === "email" ? "text-[#6FD0D2]" : "",
-          "text-xs sm:text-base",
+          type === "email" ? "text-[#6FD0D2] hidden sm:block" : "",
+          "text-[10px] sm:text-base",
           linkClassName
         )}
         href={href}

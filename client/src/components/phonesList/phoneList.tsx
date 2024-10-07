@@ -8,9 +8,14 @@ interface PhoneListProps {
 
 export const PhoneList: FC<PhoneListProps> = ({ phones, linkClassName }) => {
   return (
-    <ul className="flex flex-col space-y-2">
+    <ul className="flex flex-col space-y-[2px] sm:space-y-2">
       {phones.map((phone, index) => (
-        <PhoneItem phone={phone} linkClassName={linkClassName} key={index}>
+        <PhoneItem
+          className="leading-3 sm:leading-none"
+          phone={phone}
+          linkClassName={linkClassName}
+          key={index}
+        >
           {phone}
         </PhoneItem>
       ))}
