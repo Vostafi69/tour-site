@@ -12,8 +12,8 @@ export const Link: FC<LinkProps> = ({
   return (
     <a
       className={cn(
-        "text-black text-base font-thin hover:underline",
-        className
+        "text-base font-thin text-black hover:underline",
+        className,
       )}
       href={href}
       {...props}

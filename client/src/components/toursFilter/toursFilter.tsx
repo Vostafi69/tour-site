@@ -3,7 +3,7 @@ import { ToursForm } from "../toursForm/toursForm";
 
 export const ToursFilter: FC = () => {
   return (
-    <div className="bg-white shadow-lg rounded-[50px] w-[400px] p-[25px]">
+    <div className="w-[400px] rounded-[50px] bg-white p-[25px] shadow-lg">
       <ToursForm />
     </div>
   );

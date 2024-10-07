@@ -12,7 +12,7 @@ export const Loader: FC<LoaderProps> = ({ className }) => {
         aria-hidden="true"
         className={cn(
           className,
-          "w-20 h-20 text-gray-200 animate-spin fill-[#6fd0d2]"
+          "h-20 w-20 animate-spin fill-[#6fd0d2] text-gray-200",
         )}
         viewBox="0 0 100 101"
         fill="none"

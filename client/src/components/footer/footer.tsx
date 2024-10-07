@@ -8,7 +8,7 @@ import { FeedBackForm } from "../feedBackForm/feedBackForm";
 
 export const Footer: FC = () => {
   return (
-    <footer className="px-[40px] w-full flex flex-row justify-between bg-[#6FD0D2] py-[100px]">
+    <footer className="flex w-full flex-row justify-between bg-[#6FD0D2] px-[40px] py-[100px]">
       <div className="text-white">
         <ExtraContactsList
           extraContacts={EXTRA_CONTACTS}

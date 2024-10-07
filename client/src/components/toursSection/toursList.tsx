@@ -9,7 +9,7 @@ interface ToursListProps {
 export const ToursList: FC<ToursListProps> = ({ tours }) => {
   if (!tours) {
     return (
-      <div className="flex items-center justify-center grow text-[24px]">
+      <div className="flex grow items-center justify-center text-[24px]">
         Похоже, что туров нет
       </div>
     );

@@ -13,8 +13,8 @@ export default function Home() {
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between">
         <Hero />
-        <div className="w-full pt-[50px] relative">
-          <div className="absolute -top-[140px] z-[60] w-full h-[150px]">
+        <div className="relative w-full pt-[50px]">
+          <div className="absolute -top-[140px] z-[60] h-[150px] w-full">
             <Image src={"/fog.png"} alt="Туман" fill />
           </div>
           <ToursSection />

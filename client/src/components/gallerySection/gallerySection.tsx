@@ -3,17 +3,17 @@ import { Title } from "../title/title";
 
 export const GallerySection: FC = () => {
   return (
-    <section className="px-[40px] w-full m-[70px] flex flex-col">
-      <Title className="sm:text-[48px] text-base" headingType="h2">
+    <section className="m-[70px] flex w-full flex-col px-[40px]">
+      <Title className="text-base sm:text-[48px]" headingType="h2">
         Галерея
       </Title>
-      <div className="grid grid-cols-[442px_297px_485px_475px_] grid-rows-[349px_378px] gap-[48px] mt-[66px]">
-        <div className="bg-gray-200 rounded-[50px] col-span-2"></div>
-        <div className="bg-gray-200 rounded-[50px]  row-span-2"></div>
-        <div className="bg-gray-200 rounded-[50px] "></div>
-        <div className="bg-gray-200 rounded-[50px] "></div>
-        <div className="bg-gray-200 rounded-[50px] "></div>
-        <div className="bg-gray-200 rounded-[50px] "></div>
+      <div className="mt-[66px] grid grid-cols-[442px_297px_485px_475px_] grid-rows-[349px_378px] gap-[48px]">
+        <div className="col-span-2 rounded-[50px] bg-gray-200"></div>
+        <div className="row-span-2 rounded-[50px] bg-gray-200"></div>
+        <div className="rounded-[50px] bg-gray-200"></div>
+        <div className="rounded-[50px] bg-gray-200"></div>
+        <div className="rounded-[50px] bg-gray-200"></div>
+        <div className="rounded-[50px] bg-gray-200"></div>
       </div>
     </section>
   );

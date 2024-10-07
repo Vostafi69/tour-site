@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <ReactQueryClientProvider>
       <html lang="en">
-        <body className={cn("max-w-[1920px] mx-auto", balsamiq.className)}>
+        <body className={cn("mx-auto max-w-[1920px]", balsamiq.className)}>
           {children}
         </body>
       </html>

@@ -10,11 +10,11 @@ interface SocietyItemProps {
 
 export const SocietyItem: FC<SocietyItemProps> = ({ alt, href, img }) => {
   return (
-    <li className="transition hover:scale-125 rounded-full hover:bg-[#EDF7F8] p-2">
+    <li className="rounded-full p-2 transition hover:scale-125 hover:bg-[#EDF7F8]">
       <Link
         href={href}
         target="_blank"
-        className="w-[60px] h-[60px] relative block"
+        className="relative block h-[60px] w-[60px]"
       >
         <Image src={img} alt={alt} fill />
       </Link>

@@ -11,20 +11,20 @@ export const ToursSection: FC = () => {
   const { data, isError, isFetching, isSuccess } = useFetchTours();
 
   return (
-    <section className="px-[40px] flex flex-row justify-between w-full">
-      <div className="flex-col gap-[2px] hidden lg:flex">
-        <Title className="sm:text-[48px] text-base" headingType="h2">
+    <section className="flex w-full flex-row justify-between px-[40px]">
+      <div className="hidden flex-col gap-[2px] lg:flex">
+        <Title className="text-base sm:text-[48px]" headingType="h2">
           Программы туров
         </Title>
         <ToursFilter />
       </div>
       {isError && (
-        <div className="flex items-center justify-center grow text-[24px]">
+        <div className="flex grow items-center justify-center text-[24px]">
           Ошибка. Не удалось загрузить туры
         </div>
       )}
       {isFetching && (
-        <div className="flex items-center justify-center grow">
+        <div className="flex grow items-center justify-center">
           <Loader />
         </div>
       )}

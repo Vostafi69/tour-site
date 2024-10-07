@@ -18,19 +18,19 @@ export const Hero: FC = () => {
   return (
     <section
       ref={container}
-      className="h-[282px] sm:h-[682px] md:h-[1080px] w-full overflow-hidden relative"
+      className="relative h-[282px] w-full overflow-hidden sm:h-[682px] md:h-[1080px]"
     >
       <div className="absolute inset-0 flex items-center justify-center pt-[80px]">
         <motion.h1
           style={{ y: md }}
-          className="text-white z-50 xl:text-9xl lg:text-7xl md:text-5xl text-4xl font-bold text-left -mt-[71px] sm:-mt-[171px] "
+          className="z-50 -mt-[71px] text-left text-4xl font-bold text-white sm:-mt-[171px] md:text-5xl lg:text-7xl xl:text-9xl"
         >
           Дальневосточные
           <br />
           каникулы
         </motion.h1>
       </div>
-      <motion.div style={{ y: sm }} className="w-full h-full absolute z-[55]">
+      <motion.div style={{ y: sm }} className="absolute z-[55] h-full w-full">
         <Image
           className="h-full object-cover"
           src={"/front.png"}

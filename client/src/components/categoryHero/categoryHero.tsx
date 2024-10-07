@@ -4,9 +4,9 @@ import { Button } from "../ui/button";
 
 export const CategoryHero: FC = () => {
   return (
-    <section className="h-[656px] w-full overflow-hidden relative">
-      <div className="absolute z-50 inset-0 flex flex-col justify-end px-[40px] pb-[38px]">
-        <h1 className="text-white text-[96px] font-bold text-left -mt-44">
+    <section className="relative h-[656px] w-full overflow-hidden">
+      <div className="absolute inset-0 z-50 flex flex-col justify-end px-[40px] pb-[38px]">
+        <h1 className="-mt-44 text-left text-[96px] font-bold text-white">
           Название
           <br />
           категории

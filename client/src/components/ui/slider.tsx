@@ -15,15 +15,15 @@ const Slider = React.forwardRef<
     ref={ref}
     className={cn(
       "relative flex w-full touch-none select-none items-center",
-      className
+      className,
     )}
     {...props}
   >
     <SliderPrimitive.Track className="relative h-1 w-full grow overflow-hidden rounded-full bg-[#7C7C7C]">
       <SliderPrimitive.Range className="absolute h-full bg-[#6FD0D2]" />
     </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border border-[#7C7C7C] bg-background shadow relative after:absolute after:inset-1 after:rounded-full after:bg-[#6FD0D2] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
-    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border border-[#7C7C7C] bg-background shadow relative after:absolute after:inset-1 after:rounded-full after:bg-[#6FD0D2] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+    <SliderPrimitive.Thumb className="relative block h-5 w-5 rounded-full border border-[#7C7C7C] bg-background shadow transition-colors after:absolute after:inset-1 after:rounded-full after:bg-[#6FD0D2] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+    <SliderPrimitive.Thumb className="relative block h-5 w-5 rounded-full border border-[#7C7C7C] bg-background shadow transition-colors after:absolute after:inset-1 after:rounded-full after:bg-[#6FD0D2] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
   </SliderPrimitive.Root>
 ));
 Slider.displayName = SliderPrimitive.Root.displayName;

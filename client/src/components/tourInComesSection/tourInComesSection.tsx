@@ -4,13 +4,13 @@ import { Button } from "../ui/button";
 
 export const TourInComesSection: FC = () => {
   return (
-    <section className="px-[40px] w-full flex items-center gap-[35px] flex-col py-[50px]">
+    <section className="flex w-full flex-col items-center gap-[35px] px-[40px] py-[50px]">
       <div className="flex flex-row gap-[92px]">
-        <div className="max-w-[800px] w-full space-y-[32px]">
-          <Title className="!text-[#2D7759] text-center sm:text-[48px] text-base">
+        <div className="w-full max-w-[800px] space-y-[32px]">
+          <Title className="text-center text-base !text-[#2D7759] sm:text-[48px]">
             Что входит в тур
           </Title>
-          <ul className="list-disc text-[32px] list-inside text-left">
+          <ul className="list-inside list-disc text-left text-[32px]">
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -20,11 +20,11 @@ export const TourInComesSection: FC = () => {
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
           </ul>
         </div>
-        <div className="max-w-[800px] w-full space-y-[32px]">
-          <Title className="!text-[#851120] text-center">
+        <div className="w-full max-w-[800px] space-y-[32px]">
+          <Title className="text-center !text-[#851120]">
             Что не входит в тур
           </Title>
-          <ul className="list-disc text-[32px] list-inside text-left">
+          <ul className="list-inside list-disc text-left text-[32px]">
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>

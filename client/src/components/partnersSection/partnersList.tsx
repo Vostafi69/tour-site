@@ -8,7 +8,7 @@ interface PartnersListProps {
 
 export const PartnersList: FC<PartnersListProps> = ({ partners }) => {
   return (
-    <div className="flex flex-row gap-[100px] w-full">
+    <div className="flex w-full flex-row gap-[100px]">
       {partners.map((partner, index) => (
         <PartnerItem
           className="shrink-0 grow-0 object-scale-down transition-transform hover:-translate-y-2 hover:scale-125"

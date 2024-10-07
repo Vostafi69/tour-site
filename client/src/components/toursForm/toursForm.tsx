@@ -43,24 +43,24 @@ export const ToursForm: FC = () => {
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-2xl text-black">
               Стоимость
-              <div className="relative shrink-0 w-[50px] h-[50px]">
+              <div className="relative h-[50px] w-[50px] shrink-0">
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
                 />
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 rotate-90"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 transition-transform duration-200"
                 />
               </div>
             </AccordionTrigger>
-            <AccordionContent className="p-1 pb-4 space-y-[42px]">
+            <AccordionContent className="space-y-[42px] p-1 pb-4">
               <div className="flex flex-row justify-between">
                 <FormField
                   control={form.control}
@@ -91,72 +91,72 @@ export const ToursForm: FC = () => {
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-2xl text-black">
               Категории
-              <div className="relative shrink-0 w-[50px] h-[50px]">
+              <div className="relative h-[50px] w-[50px] shrink-0">
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
                 />
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 rotate-90"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 transition-transform duration-200"
                 />
               </div>
             </AccordionTrigger>
-            <AccordionContent className="p-1 pb-4 space-y-[42px]">
+            <AccordionContent className="space-y-[42px] p-1 pb-4">
               Тут что то
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-2xl text-black">
               Начало тура
-              <div className="relative shrink-0 w-[50px] h-[50px]">
+              <div className="relative h-[50px] w-[50px] shrink-0">
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
                 />
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 rotate-90"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 transition-transform duration-200"
                 />
               </div>
             </AccordionTrigger>
-            <AccordionContent className="p-1 pb-4 space-y-[42px]">
+            <AccordionContent className="space-y-[42px] p-1 pb-4">
               Тут что то
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
             <AccordionTrigger className="text-2xl text-black">
               Конец тура
-              <div className="relative shrink-0 w-[50px] h-[50px]">
+              <div className="relative h-[50px] w-[50px] shrink-0">
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
                 />
                 <Minus
                   size={50}
                   strokeWidth={4}
                   absoluteStrokeWidth
                   stroke="#6FD0D2"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 rotate-90"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 transition-transform duration-200"
                 />
               </div>
             </AccordionTrigger>
-            <AccordionContent className="p-1 pb-4 space-y-[42px]">
+            <AccordionContent className="space-y-[42px] p-1 pb-4">
               Тут что то
             </AccordionContent>
           </AccordionItem>
@@ -206,7 +206,7 @@ export const ToursForm: FC = () => {
             </FormItem>
           )}
         /> */}
-        <div className="w-full flex justify-center">
+        <div className="flex w-full justify-center">
           <Button type="submit">Показать</Button>
         </div>
       </form>

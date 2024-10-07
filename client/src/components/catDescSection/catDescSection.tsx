@@ -3,8 +3,8 @@ import { FC } from "react";
 
 export const CatDescSection: FC = () => {
   return (
-    <section className="px-[40px] flex flex-row justify-between gap-[50px] w-full">
-      <div className="rounded-[50px] flex-1 overflow-hidden relative">
+    <section className="flex w-full flex-row justify-between gap-[50px] px-[40px]">
+      <div className="relative flex-1 overflow-hidden rounded-[50px]">
         <Image
           src={"/catimg.png"}
           alt="Картинка"
@@ -12,7 +12,7 @@ export const CatDescSection: FC = () => {
           className="object-cover"
         />
       </div>
-      <div className="rounded-[40px] bg-[#EDF7F8] text-[32px] text-[#5C5757] p-8 flex-1 max-w-[721px]">
+      <div className="max-w-[721px] flex-1 rounded-[40px] bg-[#EDF7F8] p-8 text-[32px] text-[#5C5757]">
         Vivamus molestie quam tristique mi malesuada elementum. Duis ac lacus
         fermentum, semper lectus quis, mattis lectus. Phasellus eu est quis
         augue commodo vestibulum et id tellus. Duis tempus hendrerit nulla vel

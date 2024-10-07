@@ -17,7 +17,7 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
 const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
+  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/,
 );
 
 const formSchema = z.object({
@@ -44,17 +44,17 @@ export const FeedBackForm: FC = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-[42px] items-center"
+        className="flex flex-col items-center gap-[42px]"
       >
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel className="text-white text-2xl">Ваше ФИО</FormLabel>
+              <FormLabel className="text-2xl text-white">Ваше ФИО</FormLabel>
               <FormControl>
                 <Input
-                  className="w-full h-[70px] text-[32px] text-center bg-white"
+                  className="h-[70px] w-full bg-white text-center text-[32px]"
                   placeholder="ФИО"
                   {...field}
                 />
@@ -68,10 +68,10 @@ export const FeedBackForm: FC = () => {
           name="phone"
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel className="text-white text-2xl">Ваш телефон</FormLabel>
+              <FormLabel className="text-2xl text-white">Ваш телефон</FormLabel>
               <FormControl>
                 <Input
-                  className="w-full h-[70px] text-[32px] text-left bg-white"
+                  className="h-[70px] w-full bg-white text-left text-[32px]"
                   placeholder="(999) 999-99-99"
                   {...field}
                 />
@@ -85,10 +85,10 @@ export const FeedBackForm: FC = () => {
           name="text"
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel className="text-white text-2xl">Ваш вопрос</FormLabel>
+              <FormLabel className="text-2xl text-white">Ваш вопрос</FormLabel>
               <FormControl>
                 <Input
-                  className="w-full h-[70px] text-[32px] text-left bg-white"
+                  className="h-[70px] w-full bg-white text-left text-[32px]"
                   {...field}
                 />
               </FormControl>
@@ -97,7 +97,7 @@ export const FeedBackForm: FC = () => {
           )}
         />
         <Button
-          className="w-[300px] bg-white text-[#000000] text-[32px] h-[70px] rounded-[22px] border border-[#000000] shadow-none hover:bg-white/90"
+          className="h-[70px] w-[300px] rounded-[22px] border border-[#000000] bg-white text-[32px] text-[#000000] shadow-none hover:bg-white/90"
           type="submit"
         >
           Отправить вопрос

@@ -3,7 +3,7 @@ import { NavList } from "./navList";
 
 export const Nav: FC = () => {
   return (
-    <nav className="w-full sm:h-[80px] px-4 sm:px-[40px] mt-[6px] sm:mt-0">
+    <nav className="mt-[6px] w-full px-4 sm:mt-0 sm:h-[80px] sm:px-[40px]">
       <NavList />
     </nav>
   );

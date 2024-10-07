@@ -9,12 +9,12 @@ import { SocietyList } from "../societyList/societyList";
 
 export const ContactsSection: FC = () => {
   return (
-    <section className="px-[40px] w-full m-[70px] flex flex-col">
-      <Title className="sm:text-[48px] text-base" headingType="h2">
+    <section className="m-[70px] flex w-full flex-col px-[40px]">
+      <Title className="text-base sm:text-[48px]" headingType="h2">
         Контакты
       </Title>
-      <div className="flex flex-row justify-between w-full gap-[132px] mt-[70px]">
-        <div className="flex flex-col shrink-0">
+      <div className="mt-[70px] flex w-full flex-row justify-between gap-[132px]">
+        <div className="flex shrink-0 flex-col">
           <div className="mt-[66px] space-y-[82px]">
             <PhoneList linkClassName="text-[36px]" phones={PHONES} />
             <ExtraContactsList
@@ -27,7 +27,7 @@ export const ContactsSection: FC = () => {
           <Map />
         </div>
       </div>
-      <div className="w-full flex justify-center mt-[70px]">
+      <div className="mt-[70px] flex w-full justify-center">
         <SocietyList />
       </div>
     </section>
