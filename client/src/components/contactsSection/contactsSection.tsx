@@ -10,7 +10,9 @@ import { SocietyList } from "../societyList/societyList";
 export const ContactsSection: FC = () => {
   return (
     <section className="px-[40px] w-full m-[70px] flex flex-col">
-      <Title headingType="h2">Контакты</Title>
+      <Title className="sm:text-[48px] text-base" headingType="h2">
+        Контакты
+      </Title>
       <div className="flex flex-row justify-between w-full gap-[132px] mt-[70px]">
         <div className="flex flex-col shrink-0">
           <div className="mt-[66px] space-y-[82px]">
