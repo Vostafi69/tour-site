@@ -12,7 +12,7 @@ export const ToursSection: FC = () => {
 
   return (
     <section className="px-[40px] flex flex-row justify-between w-full">
-      <div className="flex flex-col gap-[2px]">
+      <div className="flex-col gap-[2px] hidden lg:flex">
         <Title className="sm:text-[48px] text-base" headingType="h2">
           Программы туров
         </Title>

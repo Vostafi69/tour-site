@@ -7,7 +7,7 @@ export const TourInComesSection: FC = () => {
     <section className="px-[40px] w-full flex items-center gap-[35px] flex-col py-[50px]">
       <div className="flex flex-row gap-[92px]">
         <div className="max-w-[800px] w-full space-y-[32px]">
-          <Title className="!text-[#2D7759] text-center">
+          <Title className="!text-[#2D7759] text-center sm:text-[48px] text-base">
             Что входит в тур
           </Title>
           <ul className="list-disc text-[32px] list-inside text-left">
