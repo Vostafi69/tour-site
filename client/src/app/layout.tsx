@@ -3,6 +3,9 @@ import { Balsamiq_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ReactQueryClientProvider } from "./(providers)/queryProvider";
+import { MainLayout } from "./(layouts)/mainLayout";
+import { Header } from "@/components/header/header";
+import { Footer } from "@/components/footer/footer";
 
 const balsamiq = Balsamiq_Sans({
   subsets: ["cyrillic"],
@@ -23,7 +26,9 @@ export default function RootLayout({
     <ReactQueryClientProvider>
       <html lang="en">
         <body className={cn("mx-auto max-w-[1920px]", balsamiq.className)}>
-          {children}
+          <MainLayout headerSlot={<Header />} footerSlot={<Footer />}>
+            {children}
+          </MainLayout>
         </body>
       </html>
     </ReactQueryClientProvider>
