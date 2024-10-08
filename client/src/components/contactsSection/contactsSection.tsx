@@ -16,9 +16,12 @@ export const ContactsSection: FC = () => {
       <div className="mt-[70px] flex w-full flex-row justify-between gap-[132px]">
         <div className="flex shrink-0 flex-col">
           <div className="mt-[66px] space-y-[82px]">
-            <PhoneList linkClassName="text-[36px]" phones={PHONES} />
+            <PhoneList
+              linkClassName="!text-[36px] !leading-snug"
+              phones={PHONES}
+            />
             <ExtraContactsList
-              linkClassName="text-[36px]"
+              linkClassName="!text-[36px] !leading-snug"
               extraContacts={EXTRA_CONTACTS}
             />
           </div>

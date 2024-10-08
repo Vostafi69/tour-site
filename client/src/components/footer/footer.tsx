@@ -12,10 +12,13 @@ export const Footer: FC = () => {
       <div className="text-white">
         <ExtraContactsList
           extraContacts={EXTRA_CONTACTS}
-          linkClassName="text-[36px] text-white"
+          linkClassName="!text-[36px] !leading-snug text-white"
         />
         <div className="mt-[93px]">
-          <PhoneList phones={PHONES} linkClassName="text-[36px] text-white" />
+          <PhoneList
+            phones={PHONES}
+            linkClassName="!text-[36px] !leading-snug text-white"
+          />
         </div>
         <div className="mt-[30px]">
           <SocietyList />

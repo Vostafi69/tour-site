@@ -19,11 +19,11 @@ export default function Home() {
           </div>
           <ToursSection />
         </div>
-        {/* <PartnersSection /> */}
-        {/* <ContactsSection /> */}
-        {/* <GallerySection /> */}
+        <PartnersSection />
+        <ContactsSection />
+        <GallerySection />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
